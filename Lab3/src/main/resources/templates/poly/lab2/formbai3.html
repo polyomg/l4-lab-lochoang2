@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Lab2</title>
+</head>
+<body>
+<form action="/product/save" method="post">
+    <input name="name">
+    <input name="price">
+    <button>Save</button>
+</form>
+<ul>
+    <li th:text="${product != null ? product.name : '?name'}">?name</li>
+    <li th:text="${product != null ? product.price : '?price'}">?price</li>
+</ul>
+</body>
+</html>
