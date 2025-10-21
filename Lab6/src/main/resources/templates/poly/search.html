@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Lab6</title>
+    <title>Lab7</title>
 </head>
 <body>
-<h3>SORTING BY <th:block th:text="${param.field}"/></h3>
+<form action="/product/search" method="post">
+    <input name="min" th:value="${param.min}" placeholder="Min Price?">
+    <button>Search</button>
+</form>
 <table border="1" style="width:100%">
     <tr>
         <th><a href="/product/sort?field=id">Id</a></th>
@@ -21,5 +24,6 @@
         </tr>
     </th:block>
 </table>
+
 </body>
 </html>
